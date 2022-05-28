@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: "/system"
+
+spring:
+  application:
+    name: todoapp
+  datasource:
+    password: SuperSecret
+    url: jdbc:h2:mem:todoappdb
+    username: sa
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+    show_sql: true
+  output:
+    ansi:
+      enabled: ALWAYS
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
+    org.hibernate: ERROR
+    com.demo.stepapi: DEBUG
